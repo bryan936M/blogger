@@ -1,4 +1,4 @@
-import { Blog } from "Domain/Blog";
+import { Blog } from "../Domain/Blog";
 import IBlogRepository from "./IBlogRepository";
 
 interface IWriteBlogInputs {
@@ -14,7 +14,7 @@ interface IwriteBlogResult {
 }
 
 // useCase: writeBlog
-export class writeBlog {
+export class WriteBlog {
   public constructor(private readonly _blogRepository: IBlogRepository) {}
 
   public async execute(input: IWriteBlogInputs): Promise<IwriteBlogResult> {

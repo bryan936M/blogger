@@ -1,5 +1,6 @@
-import IBlogRepository from "Application/IblogRepository";
-import { Blog } from "Domain/Blog";
+
+import IBlogRepository from "../Application/IBlogRepository";
+import { Blog } from "../Domain/Blog";
 
 export default class InMemoryBlogRepository implements IBlogRepository {
   private readonly _blogs: Blog[] = [];
