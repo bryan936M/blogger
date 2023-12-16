@@ -1,7 +1,7 @@
 import { Blog } from "../Domain/Blog";
 import IBlogRepository from "./IBlogRepository";
 
-interface IWriteBlogInputs {
+export interface IWriteBlogInputs {
   title: string;
   desc: string;
   content: string;
@@ -31,7 +31,7 @@ export class WriteBlog {
     if(!result) throw new Error("save blog failed");
 
     return {
-      blogId: "",
+      blogId: "123",
     };
   }
 }
