@@ -1,7 +1,9 @@
 import { WriteBlogController } from "./Presentation/WriteBlogController";
-import { WriteBlog } from "./Application/writeBlog";
+import { WriteBlog } from "./Application/WriteBlog";
 import InMemoryBlogRepository from "./Infrastructure/InMemoryBlogRepository";
 import { ApiServer } from "./Presentation/ApiServer";
+import { ReadBlogs } from "./Application/ReadBlog";
+import { ReadBlogsController } from "./Presentation/ReadBlogsController";
 
 async function main() {
   // repositories
@@ -9,9 +11,13 @@ async function main() {
 
   // useCases
   const writeBlogUseCase = new WriteBlog(blogRepository);
-  const writeBlogController  = new WriteBlogController(writeBlogUseCase);
+  const readBlogsUseCase = new ReadBlogs(blogRepository)
 
-  await ApiServer.start(3000, writeBlogController);
+  // controllers
+  const writeBlogController  = new WriteBlogController(writeBlogUseCase);
+  const readBlogsController = new ReadBlogsController(readBlogsUseCase);
+
+  await ApiServer.start(3000, writeBlogController, readBlogsController);
 }
 
 main();

@@ -9,4 +9,9 @@ export default class InMemoryBlogRepository implements IBlogRepository {
     this._blogs.push(blog);
     return Promise.resolve(true);
   }
+
+  public async GetBlogs(): Promise<Blog[] | null > {
+  
+    return Promise.resolve(this._blogs ?? null);
+  }
 }
