@@ -1,5 +1,5 @@
 import { Blog } from "../Domain/Blog";
-import IBlogRepository from "./IBlogRepository";
+import IBlogRepository from "../Repository/IBlogRepository";
 
 export interface IWriteBlogInputs {
   title: string;
@@ -28,7 +28,9 @@ export class WriteBlog {
 
     const result = await this._blogRepository.save(blog);
 
-    if(!result) throw new Error("save blog failed");
+    if(!result){ 
+      throw new Error("save blog failed");
+    }
 
     return {
       blogId: "123",

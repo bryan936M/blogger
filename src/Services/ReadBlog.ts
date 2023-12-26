@@ -1,5 +1,5 @@
 import { Blog } from "Domain/Blog";
-import IBlogRepository from "./IBlogRepository";
+import IBlogRepository from "../Repository/IBlogRepository";
 
 export class ReadBlogs{
   constructor(private readonly _blogRepository: IBlogRepository){}

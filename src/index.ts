@@ -1,9 +1,9 @@
-import { WriteBlogController } from "./Presentation/WriteBlogController";
-import { WriteBlog } from "./Application/WriteBlog";
-import InMemoryBlogRepository from "./Infrastructure/InMemoryBlogRepository";
-import { ApiServer } from "./Presentation/ApiServer";
-import { ReadBlogs } from "./Application/ReadBlog";
-import { ReadBlogsController } from "./Presentation/ReadBlogsController";
+import { WriteBlogController } from "./Api/WriteBlogController";
+import { WriteBlog } from "./Services/WriteBlog";
+import InMemoryBlogRepository from "./Repository/InMemoryBlogRepository";
+import { ApiServer } from "./Api/ApiServer";
+import { ReadBlogs } from "./Services/ReadBlog";
+import { ReadBlogsController } from "./Api/ReadBlogsController";
 
 async function main() {
   // repositories
