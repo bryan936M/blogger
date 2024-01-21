@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { IWriteBlogInputs, WriteBlog } from "../Application/WriteBlog";
+import { IWriteBlogInputs, WriteBlog } from "../Services/WriteBlog";
 
 export class WriteBlogController {
   public constructor(private readonly _useCase: WriteBlog) {}

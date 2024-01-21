@@ -7,6 +7,7 @@ export class ReadBlogsController {
   public async handle(request: Request, response: Response): Promise<void> {
     try {
       const result = await this._useCase.execute();
+      
       response.status(200).json(result);
 
     } catch (error: any) {

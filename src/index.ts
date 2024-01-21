@@ -17,7 +17,7 @@ async function main() {
   const writeBlogController  = new WriteBlogController(writeBlogUseCase);
   const readBlogsController = new ReadBlogsController(readBlogsUseCase);
 
-  await ApiServer.start(3000, writeBlogController, readBlogsController);
+  await ApiServer.start(4000, writeBlogController, readBlogsController);
 }
 
 main();

@@ -1,5 +1,5 @@
 
-import IBlogRepository from "../Application/IBlogRepository";
+import IBlogRepository from "../Repository/IBlogRepository";
 import { Blog } from "../Domain/Blog";
 
 export default class InMemoryBlogRepository implements IBlogRepository {
